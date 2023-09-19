@@ -1,0 +1,41 @@
+/* Example CSS for styling */
+.game-container {
+  text-align: center;
+  padding-top: 20px;
+}
+.heading-game {
+  text-align: center;
+  padding-top: 150px;
+  width: 400px;
+}
+.game-title {
+  margin-bottom: 5px;
+}
+
+.color-box {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.score {
+  text-align: center;
+
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.timer {
+  text-align: center;
+
+  font-size: 17px;
+  margin-top: 10px;
+}

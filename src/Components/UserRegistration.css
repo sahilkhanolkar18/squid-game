@@ -1,0 +1,58 @@
+/* UserRegistration.css */
+.registration-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid #eaeaea;
+  border-radius: 25px;
+  background-color: #ced4da;
+  margin-top: 150px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 25px;
+  letter-spacing: 1.1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #40c057;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #2b8a3e;
+}
+
+.register-logo {
+  width: 400px;
+}
