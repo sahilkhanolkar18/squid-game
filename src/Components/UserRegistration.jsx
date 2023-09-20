@@ -2,17 +2,16 @@ import "./UserRegistration.css";
 import logo from "../assets/logo.png";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+
+import { useDispatch, useSelector } from "react-redux";
+import { updateFormData } from "../store/formDataSlice";
 
 const UserRegistration = () => {
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    mobileNumber: "",
-    difficultyLevel: "Easy",
-  });
+  const dispatch = useDispatch();
+  const formData = useSelector((state) => state.formData);
+
   const validateEmail = (email) => {
     // Regular expression for basic email validation
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -27,10 +26,7 @@ const UserRegistration = () => {
   const handleChange = (e) => {
     if (e.target) {
       const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+      dispatch(updateFormData({ [name]: value }));
     }
   };
 
@@ -95,7 +91,6 @@ const UserRegistration = () => {
             onChange={handleChange}
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="difficultyLevel">Difficulty Level:</label>
           <select
